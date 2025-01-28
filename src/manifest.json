@@ -3,9 +3,7 @@
 	"name": "Improve Grammar & Tone",
 	"version": "1.0",
 	"description": "A Chrome extension to improve grammar and tone using LLMs.",
-	"host_permissions": [
-		"http://127.0.0.1:11434/*"
-	],
+	"host_permissions": ["http://127.0.0.1:11434/*"],
 	"background": {
 		"service_worker": "background.js"
 	},
@@ -14,8 +12,8 @@
 		"default_icon": "assets/sparkle-128by128.png"
 	},
 	"icons": {
-		"16": "assets/sparkle-128by128.png",
-		"48": "assets/sparkle-128by128.png",
+		"16": "assets/sparkle.jpg",
+		"48": "assets/sparkle.jpg",
 		"128": "assets/sparkle-128by128.png"
 	},
 	"content_security_policy": {
