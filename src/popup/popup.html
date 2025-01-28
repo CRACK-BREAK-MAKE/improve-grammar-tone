@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/tailwind.css" rel="stylesheet">
+    <title>Improve Grammar & Tone</title>
+</head>
+<body class="bg-gradient-to-r from-blue-100 to-purple-100 p-4 w-[500px]">
+<div id="app" class="bg-white p-6 rounded-xl shadow-2xl relative">
+    <!-- Title -->
+    <h1 class="text-2xl font-bold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Improve Grammar & Tone</h1>
+
+    <!-- Text Input Area -->
+    <textarea id="text-input" class="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" rows="5" placeholder="Paste your text here..."></textarea>
+
+    <!-- Tone Selection -->
+    <div class="mb-4">
+        <label for="tone" class="block text-sm font-medium text-gray-700 mb-1">Select Tone:</label>
+        <select id="tone" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="professional">Professional</option>
+            <option value="casual">Casual</option>
+            <option value="formal">Formal</option>
+            <option value="friendly">Friendly</option>
+        </select>
+    </div>
+
+    <!-- Text Type Selection -->
+    <div class="mb-4">
+        <label for="text-type" class="block text-sm font-medium text-gray-700 mb-1">Select Text Type:</label>
+        <select id="text-type" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="email">Email</option>
+            <option value="essay">Essay</option>
+            <option value="article">Article</option>
+            <option value="report">Report</option>
+        </select>
+    </div>
+
+    <!-- Model Name Input -->
+    <div class="mb-4">
+        <label for="input-model-name" class="block text-sm font-medium text-gray-700 mb-1">Model Name:</label>
+        <input id="input-model-name" type="text" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter model name">
+    </div>
+
+    <!-- Submit Button -->
+    <button id="submit" class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold text-lg p-3 rounded-lg hover:from-blue-600 hover:to-purple-700 transition duration-200">Improve</button>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="hidden text-center mt-4 text-blue-500">
+        <svg class="animate-spin h-5 w-5 mr-3 inline-block" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        Processing...
+    </div>
+
+    <!-- Corrected Text Display Area with Copy Icon -->
+    <div class="mt-4 relative">
+        <div id="corrected-text" class="p-3 border border-gray-300 rounded-lg bg-gray-50 min-h-[100px] max-h-[200px] overflow-y-auto pr-10"></div>
+        <button id="copy" class="absolute top-2 right-2 p-2 text-gray-500 hover:text-gray-700 hidden" title="Copy to clipboard">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Error Display Container -->
+    <div class="flex-grow flex items-center justify-center">
+        <div id="error" class="text-red-500 text-center hidden"></div>
+    </div>
+
+    <!-- Message Display Area -->
+    <div class="flex-grow flex items-center justify-center">
+        <div id="message" class="text-green-500 mt-4 hidden"></div>
+    </div>
+</div>
+<script type="module" src="popup.js"></script>
+</body>
+</html>

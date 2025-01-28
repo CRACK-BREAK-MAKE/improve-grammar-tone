@@ -1,0 +1,36 @@
+{
+	"name": "grammar-tone-checker",
+	"version": "1.0.0",
+	"main": "postcss.config.js",
+	"scripts": {
+		"build": "webpack",
+		"start": "npm run build && node dist/background.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"@langchain/core": "^0.3.36",
+		"@langchain/ollama": "^0.1.5",
+		"marked": "^15.0.6",
+		"postcss-cli": "^11.0.0"
+	},
+	"devDependencies": {
+		"@types/chrome": "^0.0.294",
+		"autoprefixer": "^10.4.20",
+		"copy-webpack-plugin": "^12.0.2",
+		"css-loader": "^7.1.2",
+		"file-loader": "^6.2.0",
+		"html-webpack-plugin": "^5.6.3",
+		"postcss": "^8.5.0",
+		"postcss-loader": "^8.1.1",
+		"style-loader": "^4.0.0",
+		"tailwindcss": "^3.4.17",
+		"ts-loader": "^9.5.2",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.7.3",
+		"webpack": "^5.97.1",
+		"webpack-cli": "^6.0.1"
+	}
+}
