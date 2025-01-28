@@ -9,11 +9,11 @@
 	},
 	"action": {
 		"default_popup": "popup.html",
-		"default_icon": "assets/sparkle-128by128.png"
+		"default_icon": "assets/sparkle.png"
 	},
 	"icons": {
-		"16": "assets/sparkle.jpg",
-		"48": "assets/sparkle.jpg",
+		"16": "assets/sparkle.png",
+		"48": "assets/sparkle.png",
 		"128": "assets/sparkle-128by128.png"
 	},
 	"content_security_policy": {
