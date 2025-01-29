@@ -1,5 +1,6 @@
 ## Clone the repository and run the following commands:
 
+![img.png](img.png)
 ### Download and install git from [here](https://git-scm.com/downloads)
 
 * Then clone the repository by running the following command in your terminal
